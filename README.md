@@ -20,7 +20,7 @@ Comment on the issue. In case of no activity on the issue even after 2 days, the
 
 If you have any queries or suggestions, please use the discord channel of **Matrix.io**.
 
-Go here: https://discord.gg/8qnPhHnX
+Go here: https://discord.gg/BqR28dEE
 
 ## Guidelines
 
