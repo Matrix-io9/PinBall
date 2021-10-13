@@ -1,11 +1,16 @@
 import turtle
 import winsound
 
+
 wn = turtle.Screen()
 wn.title("Pin game by Chelsi")
-wn.bgcolor("black")
+wn.bgcolor("sky blue")
 wn.setup(width = 800, height = 600)
 wn.tracer(0)
+
+
+
+
 
 # score
 score_a = 0
@@ -15,7 +20,7 @@ score_b = 0
 paddle_a = turtle.Turtle()
 paddle_a.speed(0)
 paddle_a.shape("square")
-paddle_a.color("white")
+paddle_a.color("black")
 paddle_a.shapesize(stretch_wid=5, stretch_len=1)
 paddle_a.penup()
 paddle_a.goto(-350, 0)
@@ -25,7 +30,7 @@ paddle_a.goto(-350, 0)
 paddle_b = turtle.Turtle()
 paddle_b.speed(0)
 paddle_b.shape("square")
-paddle_b.color("white")
+paddle_b.color("black")
 paddle_b.shapesize(stretch_wid=5, stretch_len=1)
 paddle_b.penup()
 paddle_b.goto(350, 0)
@@ -35,12 +40,12 @@ paddle_b.goto(350, 0)
 ball = turtle.Turtle()
 ball.speed(0)
 ball.shape("circle")
-ball.color("white")
+ball.color("red")
 ball.penup()
 ball.goto(0, 0)
 
-ball.dx = 0.15
-ball.dy = -0.15
+ball.dx = 0.17
+ball.dy = -0.17
 
 # Pen
 #'T' is for class name
@@ -57,22 +62,22 @@ pen.write("Player A: 0    Player B: 0", align = "center", font=("Courier", 24,"n
 # Function
 def paddle_a_up():
     y = paddle_a.ycor()
-    y += 20
+    y += 25
     paddle_a.sety(y)
 
 def paddle_a_down():
     y = paddle_a.ycor()
-    y -= 20
+    y -= 25
     paddle_a.sety(y)
 
 def paddle_b_up():
     y = paddle_b.ycor()
-    y += 20
+    y += 25
     paddle_b.sety(y)
 
 def paddle_b_down():
     y = paddle_b.ycor()
-    y -= 20
+    y -= 25
     paddle_b.sety(y)
 
 # Keyborad binding
@@ -125,5 +130,4 @@ while True:
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
-
 
