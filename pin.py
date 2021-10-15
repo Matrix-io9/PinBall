@@ -113,6 +113,7 @@ while True:
         ball.goto(0,0)
         ball.dx *= -1
         score_b += 1
+        pen.clear()
         pen.write("Player A: {}    Player B: {}". format(score_a, score_b), align = "center", font=("Courier", 24,"normal"))
         winsound.PlaySound("bounce.wav",winsound.SND_ASYNC)
     
@@ -125,5 +126,3 @@ while True:
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
-
-
